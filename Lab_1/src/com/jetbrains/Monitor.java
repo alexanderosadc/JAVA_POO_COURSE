@@ -1,4 +1,4 @@
-package com.jetbrains;
+package com.jetbrains.monitors;
 
 enum PanelTechnology
 {
