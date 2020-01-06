@@ -6,7 +6,7 @@ import java.util.List;
 public class University {
     private String name;
     private int foundationYear;
-    private List<Student> students = new ArrayList<Student>();
+    private List<Student> students = new ArrayList<>();
 
     University(String name, int foundationYear)
     {

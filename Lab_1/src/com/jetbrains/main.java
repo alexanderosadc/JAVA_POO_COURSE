@@ -5,16 +5,14 @@ import java.util.Scanner;
 
 public class main {
 
-    public static void main(String[] args)
-    {
-        //Monitors();
+    public static void main(String[] args) {
+        Monitors();
         Universities();
     }
 
-    private static void Universities()
-    {
-        DataInputStream dataInputStream = new DataInputStream(System.in);
-        Scanner scanner = new Scanner(System.in);
+    private static void Universities() {
+        //DataInputStream dataInputStream = new DataInputStream(System.in);
+        //Scanner scanner = new Scanner(System.in);
 
         University university_1 = new University("Harvard", 1636);
         University university_2 = new University("Oxford", 1096);
@@ -31,23 +29,21 @@ public class main {
         System.out.println(university_1.AverageMarkPerUniversity());
         System.out.println(university_2.AverageMarkPerUniversity());
         System.out.println(university_3.AverageMarkPerUniversity());
-     }
+
+        System.out.println((university_1.AverageMarkPerUniversity() + university_2.AverageMarkPerUniversity() + university_3.AverageMarkPerUniversity()) / 3);
+    }
 
 
-    private static void Monitors()
-    {
+    private static void Monitors() {
         Monitor Acer = new Monitor("CB241H", 1920, 1080,
                 60, 1, false, PanelTechnology.IPS);
         Monitor Dell = new Monitor("FV280", 600, 400,
                 60, 2, true, PanelTechnology.TN);
         Acer.ShowCharacteristicsOfMonitor();
 
-        if(Acer.xResolution > Dell.xResolution && Acer.yResolution > Dell.yResolution)
-        {
+        if (Acer.xResolution > Dell.xResolution && Acer.yResolution > Dell.yResolution) {
             System.out.println("Acer" + Acer.modelName + " is Better than" + Dell.modelName);
-        }
-        else
-        {
+        } else {
             System.out.println("Dell" + Dell.modelName + " is Better than " + Acer.modelName);
         }
     }
